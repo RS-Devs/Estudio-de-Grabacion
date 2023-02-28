@@ -1,0 +1,66 @@
+.animation {
+    position: absolute;
+    top: 0;
+    left: 5rem;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  .animation span {
+    position: absolute;
+    display: inline-block;
+    color: rgb(186, 186, 186);
+    font-size: 24px;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation: bouncing 0.5s infinite alternate ease-in-out;
+    animation-fill-mode: both;
+    -webkit-animation: bouncing 0.5s infinite alternate ease-in-out;
+}
+  
+  
+  .animation span:nth-child(1) {
+    left: 10%;
+  }
+  
+  .animation span:nth-child(2) {
+    left: 30%;
+  }
+  
+  .animation span:nth-child(3) {
+    left: 50%;
+  }
+  
+  .animation span:nth-child(4) {
+    left: 70%;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+      -webkit-transform: translateY(-20px);
+      -moz-transform: translateY(-20px);
+      -ms-transform: translateY(-20px);
+      -o-transform: translateY(-20px);
+}
+    to {
+      opacity: 1;
+      transform: translateY(0);
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+      -o-transform: translateY(0);
+}
+  }
+  
+  @keyframes bouncing {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(0, -10px, 0);
+    }
+  }
+  
